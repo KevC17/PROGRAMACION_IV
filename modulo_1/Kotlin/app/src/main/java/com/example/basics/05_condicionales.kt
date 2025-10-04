@@ -21,4 +21,19 @@ fun main(){
     } else {
         println("Padawan")
     }
+
+    var tidoDroide: String = "R2-D2"
+    when(tidoDroide){
+        "R2-D2", "R2-Q5" -> println("Droide astromecánico")
+        "C-3PO", "C-3PA" -> println("Droide de protocolo")
+        "BB-8", "BB-9E" -> println("Droide de nueva generación")
+        else -> println("Modelo Desconocido")
+    }
+    var peligro: Int = 5
+    var recompensa: Int = 5
+    when{
+        peligro>8 && recompensa < 1000-> println("Misión rechazada")
+        peligro<=3 -> println("Misión Aceptada")
+        else -> println("Requiere Evaluación Adicional")
+    }
 }
