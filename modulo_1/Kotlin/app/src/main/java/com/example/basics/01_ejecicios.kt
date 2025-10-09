@@ -1,12 +1,12 @@
 package com.example.basics
 
 fun calculadora(operacion: String, numero1: Int, numero2: Int): Int{
-    var resultado = {numero1, numero2: Int -> numero1+numero2}
+    var resultado = 0
     when(operacion){
-        "+" -> resultado =
-        "-" -> restar(numero1,numero2)
-        "*" -> dividir(numero1,)
-        "/" -> println(valor1/valor2)
+        "+" -> resultado = numero1+numero2
+        "-" -> resultado = numero1-numero2
+        "*" -> resultado = numero1*numero2
+        "/" -> resultado = numero1/numero2
     }
     return resultado
 }
@@ -34,9 +34,10 @@ fun main(){
 
     println("Calculadora")
     println("Primer valor")
-    var valor1: Int = readln()?.toIntOrNull()?:0
+    var valor1: Int = readln().toIntOrNull()?:0
     println("Segundo valor")
-    var valor2: Int = readln()?.toIntOrNull()?:0
+    var valor2: Int = readln().toIntOrNull()?:0
     println("Operación")
     var operacion: String = readln()
+    calculadora(operacion,valor2, valor1)
 }
