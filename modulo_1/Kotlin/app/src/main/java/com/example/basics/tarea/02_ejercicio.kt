@@ -2,23 +2,18 @@ package com.example.basics.tarea
 
 fun main() {
     print("Introduce la distancia en km: ")
-    val distancia = readLine()?.toDoubleOrNull()?:0.0
+    val distancia = readln().toDoubleOrNull() ?: 0.0
 
     print("¿Está lloviendo? (sí/no): ")
-    val llueve = readLine()?.lowercase()
+    val llueve = readln().lowercase()
 
-    var costoBase = 0.0
-
-    when {
-        distancia <= 5 -> costoBase = 2.5
-        distancia <= 15 -> costoBase = 5.0
-        distancia > 15 -> costoBase = 8.0
-        else -> costoBase = 0.0
+    val costoBase = when {
+        distancia <= 5 -> 2.5
+        distancia <= 15 -> 5.0
+        else -> 8.0
     }
 
-    if (llueve == "sí") {
-        costoBase += 1.5
-    }
+    val costoTotal = if (llueve == "sí") costoBase + 1.5 else costoBase
 
-    println("Costo total: $costoBase")
+    println("Costo total: $costoTotal")
 }
