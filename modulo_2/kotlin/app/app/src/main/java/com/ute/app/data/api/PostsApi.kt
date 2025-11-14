@@ -5,7 +5,7 @@ import retrofit2.http.*
 
 interface PostsApi {
     @GET("posts")
-    suspend fun getPosts(): List<PostDTOt>
+    suspend fun getPosts(): List<PostDTO>
 
     @GET("posts/{id}")
     suspend fun getPost(@Path("id") id: Int): PostDTO
