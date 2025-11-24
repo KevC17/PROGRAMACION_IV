@@ -1,0 +1,45 @@
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# React Native packager
+.vscode/
+.idea/
+.expo/
+.expo-shared/
+
+# Android Studio
+*.iml
+.gradle/
+.idea/
+build/
+*.log
+local.properties
+*.apk
+*.ap_
+*.dex
+*.class
+*.so
+*.jar
+*.war
+*.swp
+.DS_Store
+*.db
+
+# Xcode
+# Uncomment if you are also developing for iOS
+# DerivedData/
+# .build/
+# *.xcworkspace
+# *.xcuserstate
+
+# OS specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
