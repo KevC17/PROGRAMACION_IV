@@ -10,6 +10,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.material3.*
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -53,6 +54,28 @@ fun JetpackComposeTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
+        content = content
+    )
+}
+
+private val LightColors = lightColorScheme(
+    primary = md_theme_light_primary,
+    onPrimary = md_theme_light_onPrimary,
+)
+
+private val DarkColors = darkColorScheme(
+    primary = md_theme_dark_primary
+)
+
+@Composable
+fun PetAdoptionTheme(
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val colors = if (useDarkTheme) DarkColors else LightColors
+    MaterialTheme(
+        colorScheme = colors,
+        typography = Typography(),
         content = content
     )
 }
