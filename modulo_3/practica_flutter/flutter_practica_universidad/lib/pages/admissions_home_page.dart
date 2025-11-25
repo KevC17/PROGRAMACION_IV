@@ -35,6 +35,18 @@ class AdmissionsHomePage extends StatelessWidget {
               onPressed: () => context.go('/fees'),
               child: const Text('Derechos de inscripción'),
             ),
+            const SizedBox(height: 12),
+
+            ElevatedButton(
+              onPressed: () => context.go('/credits'),
+              child: const Text('Sumatoria de créditos'),
+            ),
+            const SizedBox(height: 12),
+
+            ElevatedButton(
+              onPressed: () => context.go('/tip'),
+              child: const Text('Calculo de propinas'),
+            ),
           ],
         ),
       ),
